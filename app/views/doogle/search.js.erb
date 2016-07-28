@@ -1,0 +1,7 @@
+
+$('#definitions').empty();
+$('<% @sprites.each do |sprite| %><img src = "<%= sprite %>" width = "30%"><% end %><br>').appendTo('#definitions');
+$('<% @definitions.each do |definition| %><p class = "definition"><%= definition %></p><% end %>').appendTo('#definitions');
+
+$('#input_validation').empty();
+$('<p id = "validationtext"><%= @validation_text%></p>').appendTo('#input_validation');

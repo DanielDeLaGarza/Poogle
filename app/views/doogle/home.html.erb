@@ -1,0 +1,25 @@
+<div id="doogle">
+  <h1>
+    <span class="blue">P</span>
+    <span class="red">o</span>
+    <span class="yellow">o</span>
+    <span class="blue">g</span>
+    <span class="green">l</span>
+    <span class="red">e</span>
+  </h1>
+
+  <div class = "adjustable">
+    <%= form_for(:word_entry, url: search_path, remote: true) do |f| %>
+        <span >
+          <%= f.text_field :word, id: 'search_field' %>
+        </span>
+        <!-- jquery inserts input validation text here -->
+        <div id = "input_validation"></div>
+        <div>
+          <%= f.submit 'Poogle Search', id: 'search_button' %>
+        </div>
+    <% end%>
+    <!-- jquery inserts search results here -->
+    <div id = "definitions" class = "definitions"></div>
+  </div>
+</div>
